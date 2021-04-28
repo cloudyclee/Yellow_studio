@@ -1,0 +1,111 @@
+nav#navigation.navbar.navbar-expand-md.navbar-light.fixed-top
+  a.navbar-brand(href="#header_index") Yellow Studio
+  button#toggler.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.ml-auto
+      li.nav-item
+        a.nav-link(href="#about") About
+      li.nav-item
+        a.nav-link(href="#service") Service
+      li.nav-item
+        a.nav-link(href="#works") Works
+      li.nav-item
+        a.nav-link(href="#contact") Contact
+
+header#header_index
+  .container
+    img.icon(src="http://awiclass.monoame.com/img/webpic/w_icon.svg", alt="")
+  img.marginbottom.mountain(src="https://awiclass.monoame.com/img/margin/m_index.svg", alt="")
+  .explore Explore
+
+section#about
+  .container
+    .row
+      .col-4.offset-4
+        img.tri.tri1(src="https://awiclass.monoame.com/img/webpic/w_tri1.svg", alt="")
+    .row
+      .col-8.offset-4
+        h1.r1text WORKS IN YELLOW
+    .row
+      .col-4
+        img.tri.tri2(src="https://awiclass.monoame.com/img/webpic/w_tri2.svg", alt="")
+      .col-8 
+        img.tri.tri3(src="https://awiclass.monoame.com/img/webpic/w_tri3.svg", alt="")
+        h4.r2text YELLOW STUDIO-Website Design / Development
+        h4.r2text Interactive Art Design
+    .row  
+      .col-8 
+        h2.r3text <br>MORE THAN 430 SUCCESS CASES
+      .col-4
+        img.tri.tri5(src="https://awiclass.monoame.com/img/webpic/w_tri5.svg", alt="")
+    .row  
+      .col-4
+        img.tri.tri4(src="https://awiclass.monoame.com/img/webpic/w_tri4.svg", alt="")
+      .col-4
+        a.btn.btn-light(href="#works") More Story
+      .col-4
+  #cross
+  img.cat#cat(src="http://awiclass.monoame.com/catpic/cat_leftop.png")
+  img.marginbottom(src="http://awiclass.monoame.com/img/margin/m_about.svg")
+  
+section#service
+  .container
+    .row
+      h1 Service
+    .row
+      .col-4
+        img.icon_service(src="http://awiclass.monoame.com/img/webpic/w_service_icon1.svg")
+        h3 CI/VI Design
+      .col-4
+        img.icon_service(src="http://awiclass.monoame.com/img/webpic/w_service_icon2.svg")
+        h3 Motion Graphic
+      .col-4
+        img.icon_service(src="http://awiclass.monoame.com/img/webpic/w_service_icon3.svg")
+        h3 Web Development
+        
+section#works
+  .container
+    .row
+      h1 Works
+    .row
+      .col-sm-6.work.big(v-for="item in works.slice(1,2)")
+        //- img(v-bind:src="item.img.replace('http','https')", alt="")
+        img(src="https://monoame.com/projects/proj_create_poster/main.jpg", alt="")
+        .texts
+          h4.title {{ item.name }} 
+          p.content(v-html="item.content.substring(0,40)")
+      .col-sm-6.limited
+        //- .row
+        .col-sm-6.work.limited(v-for="item in works.slice(2,6)")
+          //- img(v-bind:src="item.img.replace('http','https')", alt="")
+          img(src="http://i.giphy.com/l2JhzQ1MmNxwcnUOY.gif", alt="")
+          .texts
+            h4.title {{ item.name }}
+  img.marginbottom.mountain(src="http://awiclass.monoame.com/img/margin/m_works.svg")
+
+section#contact
+  .row
+    .col-6
+      .mail
+        .mail_cover
+          img(src="http://awiclass.monoame.com/img/webpic/w_mail_cover.svg", alt="")
+        .mail_body
+          h5 Dear Yellow Studio
+          label Name
+          input
+          label Email
+          input
+          label Content
+          textarea
+    .col-6.d-flex.flex-column
+      h2 CONTACT
+      p If you have any question about us,<br> Don`t hestitate to contact us !
+      p YELLOWSTUDIO@gmail.com<br>ADDRESS: TAIWAN, TAIPEI, XORO Road<br>Phone: 02-12345678
+  img.stand_cat#cat_blue(src="http://awiclass.monoame.com/catpic/cat_blue_cat.png")
+  img.stand_cat#cat_gray(src="http://awiclass.monoame.com/catpic/cat_grey_cat.png")
+  img.stand_cat#cat_yellow(src="http://awiclass.monoame.com/catpic/cat_yellow_cat.png")
+  
+footer#footer
+   .container
+    img.icon(src="http://awiclass.monoame.com/img/webpic/w_icon_black.svg", alt="")
