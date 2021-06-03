@@ -31,6 +31,8 @@ section
     border: none
     margin-right: 10px
     background-color: rgba($color_white,0.5)
+  .nav-link, .navbar-brand
+    font-size: 28px
   a
     color: $color_white
     padding: 10px 15px
@@ -76,7 +78,7 @@ header
   
   @keyframes upin
     0%
-      bottom: -50px
+      bottom: -5.88vw
     100%
       bottom: -5px
     
@@ -84,7 +86,7 @@ header
     0%
       bottom: -5px
     100%
-      bottom: -50px
+      bottom: -5.88vw
     
 #about
   background-color: $color_brown
@@ -130,12 +132,8 @@ header
   .cat
     position: absolute
     right: 10%
-    bottom: -2px
+    bottom: -10px
     width: 30%
-  .marginbottom
-    top: calc(100% - 2px)
-    right: 50%
-    z-index: 10
   #cross
     position: absolute
     pointer-events: none
@@ -153,6 +151,10 @@ header
 #service
   background-color: $color_white
   padding: 120px 0px
+  .marginbottom
+    top: -0.1vw
+    right: 50%
+    z-index: 10
   .container
     .icon_service
       width: 60%
@@ -269,6 +271,12 @@ header
       border: solid 2px black
     textarea
       height: 130px
+  .contact-text
+    line-height: 3rem
+    h1
+      font-size: 40px
+    p
+      font-size: 24px 
   .stand_cat
     position: absolute
     bottom: -30px
